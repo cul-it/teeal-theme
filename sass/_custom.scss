@@ -1,0 +1,303 @@
+/* CUL custom theme for TEEAL based on D8starter */
+
+/*** Typography ***/
+
+h1, h2, h3, h4 { font-family: Helvetica, Arial, sans-serif; font-weight: 600; }
+h5, h6 { font-family: Helvetica, Arial, sans-serif; font-weight: 300; }
+body { font-family: Helvetica, Arial, sans-serif; font-weight: 400; }
+
+h1, h2, h3 { margin-top: 1.5em; margin-bottom: 0.75em; }
+.page-header { padding-bottom: 0; }
+
+/*** Layout ***/
+
+.region-header { position: relative; display: flex; flex-direction: column; }
+.region-header a:hover { color: $cu-red; }
+.region-header .block { width: 100%; }
+
+.block-language ul li > a > img { height: 24px; width: 32px; }
+
+.masthead {
+    position: relative;
+    &:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: ' ';
+    background-color: #68645b; /* provides a default if no image loads */
+    background-size: cover; }
+}
+
+.main-wrapper {
+    position: relative;
+    background: #FFF;
+    color: #222;
+    box-shadow: 0px 0px 40px #999;
+    border-radius: 40px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 0;
+}
+
+.region-branding { height: 150px; }
+.logo { margin-top: 3em; margin-left: 2em; }
+.cornerimg {
+    display: none;
+}
+
+.navbar { min-height: inherit; }
+.navbar-default {
+    background-color: $primary;
+    border-radius: 0;
+    border: 0;
+    color: #FFF;
+    font-family: 'Hind', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.navbar-default .navbar-nav > li { padding: 10px 0; margin: 0; }
+.navbar-default .navbar-nav > li > a { color: #FFF; padding: 2px 15px; border-left: 1px dotted #A9BB57; }
+.navbar-default .navbar-nav > li:first-child > a { border-left: none; }
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus { color: $highlight; background-color: $primary; }
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > li.active { background-color: $highlight; color: $primary; }
+
+.breadcrumb {
+  background-color: transparent;
+  font-size: 0.9em;
+  padding-left: 0;
+  li > a { text-decoration: underline; }
+}
+
+.region-content ul { list-style: none; }
+.region-content ul > li {
+  color: #222;
+  &:before {
+    content: '\25AA';
+    color: $highlight;
+    display: inline-block;
+    width: 0.75em;
+    margin-left: -0.75em;
+  }
+}
+
+.region-content ul.nav-tabs > li::before { content: ''; }
+
+.col { width: 33%; float: left; }
+
+/***** Front page *****/
+.view-callout-rotator { margin-top: 4em; margin-bottom: 1em; }
+.view-callout-rotator img { border: 1px solid $highlight; }
+.region-content a.learn-button, button.btn-primary {
+  color: #FFF;
+  background: #5f9e37;
+  border: 5px solid $highlight;
+  border-radius: 25px;
+  padding: 0.7em 1.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 0.05em;
+  &:hover, &:active {
+    color: #FFF;
+    background: radial-gradient(#406b25,#5f9e37);
+    border-color: $highlight;
+  }
+}
+
+.view-awareness-box {
+  background: linear-gradient(180deg,$grad,#FFF);
+  padding: 1.5em;
+  border-radius: 1.5em;
+}
+
+.view-awareness-box .views-field-nothing p { margin-top: 1em; &:after { content: ' \00BB'; } }
+
+.intro-text { margin-top: 4em; }
+.teeal { font-weight: bold; font-size: 1.25em; color: $secondary; }
+
+/***** Sidebar *****/
+.region-sidebar-second {
+    .navbar-nav {
+        background-color: $secondary;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        position: relative;
+        right: -15px;
+        padding-left: 1em;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        margin-bottom: 3em;
+        width: 100%;
+        float: none;
+        li { width: 100%; }
+        li > a {
+            padding: 0 0.5em;
+            color: #D0E4C4;
+            &:before {
+                content: "\e250";
+                font-family: 'Glyphicons Halflings';
+                font-size: 10px;
+                padding-right: 10px;
+            }
+            &:hover { color: #FFF; background-color: $secondary; }
+        }
+    }
+}
+
+/***** Journals *****/
+.quicktabs-main {
+  border: 1px solid $grad;
+  padding: 2em;
+}
+
+ul.quicktabs-tabs {
+  margin-top: 1em;
+  margin-bottom: 0;
+  padding-left: 0;
+  li {
+    padding: 0.2em 1em;
+    border-width: 1px 1px 0 1px;
+    border-color: $grad;
+    border-style: solid;
+    margin: 0 0.1em;
+    background: linear-gradient(0deg,$grad,#ffffff);
+    color: #222;
+    a { color: #222; text-decoration: none; }
+    &:before { content: ''; }
+    &:first-child { margin-left: 0; }
+    &.active {
+      background: #FFFFFF;
+      border-bottom: 1px solid #FFFFFF;
+      font-weight: bold;
+    }
+  }
+}
+
+.quicktabs-tabpage {
+  .view-journals .view-header > div.abc {
+    width: 100%;
+    overflow-wrap: break-word;
+    a, span {
+      font-size: 12px;
+      padding: 0.2em 0.5em 0 0.5em;
+      margin: 2px;
+      border: 1px solid $secondary;
+      color: $secondary;
+      text-decoration: none;
+      display: inline-block;
+    }
+    a:hover { color: #FFF; background: $secondary; text-decoration: none; }
+    span {
+      border: 1px solid #DDDDDD;
+      color: #DDDDDD;
+    }
+  }
+}
+
+.view-journals .view-content h3 {
+  font-size: 1.2em;
+  a {
+    color: $headline;
+  }
+}
+
+.quicktabs-block-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 0.25em;
+  color: $headline;
+}
+
+.view-journals .views-field-field-journal-new {
+  color: #C00;
+  font-weight: bold;
+  font-size: 0.65em;
+}
+
+.view-journals .views-field-field-publisher,
+.view-journals .views-field-field-journal-end-year,
+.view-journals .views-field-field-journal-new-title,
+.view-journals .views-field-field-journal-former-title { font-size: 0.85em; color: #555; }
+
+/**** Informational Materials ****/
+.view-promotional-materials {
+  .views-row {
+    margin: 2em;
+    text-align: center;
+    margin-bottom: 4em;
+    img { margin: 0 auto; }
+  }
+  .views-field-title {
+    padding: 2em 0 1em 0;
+    background: linear-gradient(0deg,#FFF,$grad);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+  }
+}
+
+/***** Quotes *****/
+.view-quotes {
+  border-top: 1px dotted $grad;
+  margin-top: 2em;
+  .views-row {
+    margin: 1em 0 2em 0;
+    border-bottom: 1px dotted $grad;
+    color: #555;
+    font-size: 0.8em;
+    padding: 2em;
+    padding-left: 4em;
+    background: url("/themes/teeal/images/layout/quote-large.gif") top left no-repeat;
+  }
+  .views-field-body {
+    margin-bottom: 1em;
+    font-size: 1.1em;
+    color: #222;
+  }
+}
+
+/***** Knowledge Base and News ****/
+.view-knowledge-base, .view-news {
+  .views-row {
+  margin: 1em;
+  border-bottom: 1px dotted $grad;
+  padding: 0 1em 1em 1em;
+  }
+}
+
+/*** Citations - override body behavior for author field ***/
+.view-citations .views-field-body p { display: inline-block; }
+
+/*** map ***/
+.cta { font-size: 0.85em; color: $secondary; }
+.leaflet-popup-content {
+  h2 { font-size: 1.1em; margin: 0; }
+  .field--name-field-institution-city {
+    display: inline;
+    &:after { content: ', ' }
+  }
+  .field--name-field-institution-country { display: inline; }
+}
+
+/*** Forms ***/
+.webform { background: $tbl-bg; padding: 2em; }
+.form-actions { margin-top: 1em; }
+
+/*** Size dependent ***/
+@media screen and (min-width: 768px) {
+    .region-header {
+      flex-direction: row;
+      .block { width: 50%; }
+    }
+    .region-header .block-search, .region-header .block-language { width: 25%; }
+    .region-content { margin-left: 3.5em; margin-right: 3.5em; }
+    .cornerimg {
+        display: inline-block;
+        position: absolute;
+        top: -25px;
+        right: -22px;
+    }
+}
