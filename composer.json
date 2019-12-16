@@ -7,6 +7,9 @@
     "require": {
         "composer/installers": "^1.0"
     },
+    "dependencies": {
+        "ejs": ">=2.5.5"
+    },
     "license": "GPL-2.0+",
     "authors": [{
         "name": "Liz Woods",
