@@ -1,0 +1,15 @@
+{
+    "name": "cul-it/teeal-theme",
+    "description": "Drupal 8 theme for teeal.org Website",
+    "type": "drupal-theme",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "composer/installers": "^1.0"
+    },
+    "license": "GPL-2.0+",
+    "authors": [{
+        "name": "Liz Woods",
+        "email": "eaw82@cornell.edu"
+    }]
+}
